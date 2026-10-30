@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   # 1. MQTT Broker (Mosquitto)
   mosquitto:
@@ -10,7 +8,7 @@ services:
       - "1883:1883" # MQTT TCP
       - "9001:9001" # MQTT WebSocket
     volumes:
-      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - ./Mosquitto/Config/mosquitto.conf:/mosquitto/config/mosquitto.conf
 
   # 2. Backend Service (Flask API + DB Logger)
   backend:
